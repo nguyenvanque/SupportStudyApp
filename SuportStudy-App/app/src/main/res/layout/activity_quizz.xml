@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/homeLayout"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".activity.quizz.QuizzActivity">
+
+    <com.agrawalsuneet.dotsloader.loaders.LazyLoader
+        android:id="@+id/myLoader"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginTop="30dp"
+        app:lazyloader_animDur="800"
+        app:lazyloader_dotsDist="6dp"
+        app:lazyloader_dotsRadius="6dp"
+        app:lazyloader_firstDelayDur="150"
+        app:lazyloader_firstDotColor="#FD0B0B"
+        app:lazyloader_interpolator="@android:anim/decelerate_interpolator"
+        app:lazyloader_secondDelayDur="300"
+        app:lazyloader_secondDotColor="#64DD17"
+        app:lazyloader_thirdDotColor="#FFD600" />
+  <androidx.core.widget.NestedScrollView
+      android:id="@+id/questionView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+      <LinearLayout
+          android:id="@+id/ln"
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+          <TextView
+              android:text="Test"
+              android:textSize="26dp"
+              android:textColor="@color/black"
+              android:textStyle="bold"
+              android:layout_gravity="center_horizontal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"/>
+
+          <TextView
+              android:id="@+id/txtQ1"
+              style="@style/questions"
+              android:text="1" />
+
+          <!-- Answers for question one. -->
+          <RadioGroup
+              android:id="@+id/question1"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+              <RadioButton
+                  android:id="@+id/radio1_op1"
+                  style="@style/answers"
+                  android:text="1" />
+
+
+              <RadioButton
+                  android:id="@+id/radio1_op2"
+                  style="@style/answers"
+                  android:text="2" />
+
+              <RadioButton
+                  android:id="@+id/radio1_op3"
+                  style="@style/answers"
+                  android:text="3" />
+              <RadioButton
+                  android:id="@+id/radio1_op4"
+                  style="@style/answers"
+                  android:text="4" />
+
+          </RadioGroup>
+
+          <TextView
+              android:id="@+id/txtQ2"
+              style="@style/questions"
+              android:text="2" />
+
+          <!-- Answers for question 3 -->
+          <RadioGroup
+              android:id="@+id/question2"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+              <RadioButton
+                  android:id="@+id/radio2_op1"
+                  style="@style/answers"
+                  android:text="1" />
+
+
+              <RadioButton
+                  android:id="@+id/radio2_op2"
+                  style="@style/answers"
+                  android:text="2" />
+
+              <RadioButton
+                  android:id="@+id/radio2_op3"
+                  style="@style/answers"
+                  android:text="3" />
+              <RadioButton
+                  android:id="@+id/radio2_op4"
+                  style="@style/answers"
+                  android:text="4" />
+
+          </RadioGroup>
+          <TextView
+              android:id="@+id/txtQ3"
+              style="@style/questions"
+              android:text="3" />
+          <RadioGroup
+              android:id="@+id/question3"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginTop="@dimen/marginTop"
+              android:orientation="vertical">
+
+              <RadioButton
+                  android:id="@+id/radio3_op1"
+                  style="@style/answers"
+                  android:text="1" />
+
+
+              <RadioButton
+                  android:id="@+id/radio3_op2"
+                  style="@style/answers"
+                  android:text="2" />
+
+              <RadioButton
+                  android:id="@+id/radio3_op3"
+                  style="@style/answers"
+                  android:text="3" />
+              <RadioButton
+                  android:id="@+id/radio3_op4"
+                  style="@style/answers"
+                  android:text="4" />
+
+          </RadioGroup>
+          <!-- Answers for question 4 -->
+          <TextView
+              android:id="@+id/txtQ4"
+              style="@style/questions"
+              android:text="3" />
+          <RadioGroup
+              android:id="@+id/question4"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginTop="@dimen/marginTop"
+              android:orientation="vertical">
+
+              <RadioButton
+                  android:id="@+id/radio4_op1"
+                  style="@style/answers"
+                  android:text="1" />
+
+
+              <RadioButton
+                  android:id="@+id/radio4_op2"
+                  style="@style/answers"
+                  android:text="2" />
+
+              <RadioButton
+                  android:id="@+id/radio4_op3"
+                  style="@style/answers"
+                  android:text="3" />
+              <RadioButton
+                  android:id="@+id/radio4_op4"
+                  style="@style/answers"
+                  android:text="4" />
+
+          </RadioGroup>
+          <!-- Answers for question 5 -->
+          <TextView
+              android:id="@+id/txtQ5"
+              style="@style/questions"
+              android:text="3" />
+          <RadioGroup
+              android:id="@+id/question5"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginTop="@dimen/marginTop"
+              android:orientation="vertical">
+
+              <RadioButton
+                  android:id="@+id/radio5_op1"
+                  style="@style/answers"
+                  android:text="1" />
+
+
+              <RadioButton
+                  android:id="@+id/radio5_op2"
+                  style="@style/answers"
+                  android:text="2" />
+
+              <RadioButton
+                  android:id="@+id/radio5_op3"
+                  style="@style/answers"
+                  android:text="3" />
+              <RadioButton
+                  android:id="@+id/radio5_op4"
+                  style="@style/answers"
+                  android:text="4" />
+
+          </RadioGroup>
+          <!-- Submit your answers or rest them. -->
+          <androidx.appcompat.widget.AppCompatButton
+              android:id="@+id/btnSubmit"
+              style="@style/buttons"
+              android:text="Nộp bài" />
+      </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+
+
+
+</RelativeLayout>

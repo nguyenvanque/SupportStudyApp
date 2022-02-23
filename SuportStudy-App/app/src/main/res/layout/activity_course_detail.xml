@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.course.CourseDetailActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:background="@drawable/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="65dp">
+            <ImageView
+                android:id="@+id/backIv"
+                android:src="@drawable/ic_back"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                app:tint="@color/black"
+                android:layout_marginLeft="20dp"
+                android:layout_width="18dp"
+                android:layout_height="18dp"/>
+            <TextView
+                android:text="Chi tiết"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_toRightOf="@id/backIv"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/ic_notification"
+                    android:layout_marginRight="10dp"
+                    app:tint="@color/black"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/IVProfile"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/tutor" />
+            </LinearLayout>
+        </RelativeLayout>
+        <androidx.core.widget.NestedScrollView
+            android:layout_below="@id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/courseIv"
+                    android:src="@drawable/kotlin_android"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="10dp"
+                    app:riv_corner_radius="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"/>
+                <TextView
+                    android:id="@+id/txtCourseName"
+                    android:layout_marginLeft="20dp"
+                    android:text="Android kotlin"
+                    android:textSize="25dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:text="Mô tả"
+                    android:textSize="25dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/txtDescription"
+                    android:text="Mô tả"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/grey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/network"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"/>
+                    <LinearLayout
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:text="100% online"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text="Start instanlyand learn at your our own schedule"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/network"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"/>
+                    <LinearLayout
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:text="Tham gia các nhóm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text="Có thể tham gia các nhóm có trong khóa này để thảo luận"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/network"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"/>
+                    <LinearLayout
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:text="Tài liệu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text="Có thể xem tài liệu hướng dẫn trong khóa này"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnJoin"
+                    android:text="Tài liệu"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/button03"
+                    android:textColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCrearteClass"
+                    android:text="Tạo lớp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/button03"
+                    android:textColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,429 @@
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/refreshLayout"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activity.acount.ProfileActivity">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.agrawalsuneet.dotsloader.loaders.LazyLoader
+        android:id="@+id/myLoader"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        app:lazyloader_animDur="800"
+        app:lazyloader_dotsDist="6dp"
+        app:lazyloader_dotsRadius="6dp"
+        app:lazyloader_firstDelayDur="150"
+        app:lazyloader_firstDotColor="#FD0B0B"
+        app:lazyloader_interpolator="@android:anim/decelerate_interpolator"
+        app:lazyloader_secondDelayDur="300"
+        app:lazyloader_secondDotColor="#64DD17"
+        app:lazyloader_thirdDotColor="#FFD600" />
+    <RelativeLayout
+        android:id="@+id/dataLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:background="@color/white"
+            >
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_back"
+                app:tint="@color/black" />
+            <RelativeLayout
+                android:id="@+id/finishLayout"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="120dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/finishTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="Xong"
+                    android:layout_marginRight="20dp"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+            <View
+                android:background="@color/greynhat4"
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_height="0.1dp"/>
+        </RelativeLayout>
+        <androidx.core.widget.NestedScrollView
+            android:layout_below="@id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/avatarIv"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/avatar_default"
+                    app:civ_border_color="@color/grey"
+                    app:civ_border_width="3dp" />
+
+                <TextView
+                    android:id="@+id/nameTv"
+                    android:textSize="25dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:layout_below="@id/avatarIv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+                <RelativeLayout
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@id/nameTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Thông báo"
+                        android:textColor="@color/grey"
+                        android:textSize="16dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <RelativeLayout
+                        android:id="@+id/notificationLayout"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp">
+
+                        <ImageView
+                            android:id="@+id/notificationIv"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/ic_notifcation_setting"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"/>
+                        <TextView
+                            android:text="Bật tắt thông báo"
+                            android:layout_toRightOf="@id/notificationIv"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="15dp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <com.suke.widget.SwitchButton
+                            android:id="@+id/switchNotification"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:layout_toRightOf="@id/notificationIv"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/greynhat3" />
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/profileTv"
+                        android:layout_below="@id/notificationLayout"
+                        android:text="Thôn tin"
+                        android:textColor="@color/grey"
+                        android:textSize="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <RelativeLayout
+                        android:id="@+id/changeNameLayout"
+                        android:layout_below="@id/profileTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp">
+
+                        <ImageView
+                            android:id="@+id/changeNameIv"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/ic_edit_name"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"/>
+                        <TextView
+                            android:text="Đổi tên"
+                            android:layout_toRightOf="@id/changeNameIv"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="15dp"
+                            android:textColor="@color/blackNhat2"
+                            android:textStyle="bold"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <View
+                            android:layout_alignParentBottom="true"
+                            android:layout_toRightOf="@id/changeNameIv"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/greynhat3"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/listGroupLayout"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/changeNameLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp">
+
+                        <ImageView
+                            android:id="@+id/blockIv"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/ic_person"
+                            app:tint="@color/pinkN"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"/>
+                        <TextView
+                            android:text="Nhóm đã tham gia"
+                            android:layout_toRightOf="@id/blockIv"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="15dp"
+                            android:textColor="@color/blackNhat2"
+                            android:textStyle="bold"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <View
+                            android:layout_alignParentBottom="true"
+                            android:layout_toRightOf="@id/blockIv"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/greynhat3"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"/>
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/languageTv"
+                        android:layout_marginTop="5dp"
+                        android:text="Đổi ngôn ngữ"
+                        android:textColor="@color/grey"
+                        android:textSize="16dp"
+                        android:layout_below="@id/listGroupLayout"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <RelativeLayout
+                        android:id="@+id/languageLayout"
+                        android:layout_below="@id/languageTv"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp">
+
+                        <ImageView
+                            android:id="@+id/languageIv"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/ic_language"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"/>
+                        <TextView
+                            android:text="Đổi ngôn ngữ"
+                            android:layout_toRightOf="@id/languageIv"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="15dp"
+                            android:textColor="@color/blackNhat2"
+                            android:textStyle="bold"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <View
+                            android:layout_alignParentBottom="true"
+                            android:layout_toRightOf="@id/languageIv"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/greynhat3"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"/>
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/accountTv"
+                        android:textSize="16dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="@color/grey"
+                        android:text="Bảo mật"
+                        android:layout_below="@id/languageLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <RelativeLayout
+                        android:id="@+id/changepasswordLayout"
+                        android:layout_below="@id/accountTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp">
+                        <ImageView
+                            android:id="@+id/changepasswordIv"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/ic_change_password"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"/>
+                        <TextView
+                            android:text="Đổi mật khẩu"
+                            android:layout_toRightOf="@id/changepasswordIv"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="15dp"
+                            android:textColor="@color/blackNhat2"
+                            android:textStyle="bold"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <View
+                            android:layout_alignParentBottom="true"
+                            android:layout_toRightOf="@id/changepasswordIv"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/greynhat3"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/deletedUserLayout"
+                        android:layout_below="@id/changepasswordLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp">
+                        <ImageView
+                            android:id="@+id/deletedUserIv"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/ic_delete_user"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"/>
+                        <TextView
+                            android:text="Xóa tài khoản của bạn"
+                            android:layout_toRightOf="@id/deletedUserIv"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="15dp"
+                            android:textColor="@color/blackNhat2"
+                            android:textStyle="bold"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <View
+                            android:layout_alignParentBottom="true"
+                            android:layout_toRightOf="@id/deletedUserIv"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/greynhat3"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/reportProblemLayout"
+                        android:layout_below="@id/deletedUserLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp">
+                        <ImageView
+                            android:id="@+id/reportProblemIv"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/ic_report"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"/>
+                        <TextView
+                            android:text="Phản hồi ý kiến"
+                            android:layout_toRightOf="@id/reportProblemIv"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="15dp"
+                            android:textColor="@color/blackNhat2"
+                            android:textStyle="bold"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <View
+                            android:layout_alignParentBottom="true"
+                            android:layout_toRightOf="@id/reportProblemIv"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/greynhat3"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/logoutLayout"
+                        android:layout_below="@id/reportProblemLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp">
+                        <ImageView
+                            android:id="@+id/logoutIv"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/ic_logout"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"/>
+                        <TextView
+                            android:text="Đăng xuất"
+                            android:layout_toRightOf="@id/logoutIv"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="15dp"
+                            android:textColor="@color/blackNhat2"
+                            android:textStyle="bold"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="Version 1.0.0"
+                        android:fontFamily="@font/mo_li"
+                        android:layout_below="@id/logoutLayout"
+                        android:paddingBottom="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</RelativeLayout>
+
+
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

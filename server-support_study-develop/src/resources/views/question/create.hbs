@@ -1,0 +1,46 @@
+<div class='mt-4'>
+  <h3>Đăng Câu hỏi</h3>
+  <form method='POST' action='/question/store'>
+    <div class='mb-3'>
+      <label for='name' class='form-label'>Tên Câu hỏi</label>
+      <input type='text' class='form-control' id='title' name='title' />
+    </div>
+    <div class='mb-3'>
+      <label for='description' class='form-label'>Đáp án 1</label>
+      <input
+        type='text'
+        class='form-control'
+        id='option1'
+        name='option1'
+      />
+    </div>
+    <div class='mb-3'>
+      <label for='videoId' class='form-label'>Đáp án 2</label>
+      <input type='text' class='form-control' id='option2' name='option2' />
+    </div>
+    <div class='mb-3'>
+      <label for='level' class='form-label'>Đáp án 3</label>
+      <input type='text' class='form-control' id='option3' name='option3' />
+    </div>
+    <div class='mb-3'>
+      <label for='level' class='form-label'>Đáp án 4</label>
+      <input type='text' class='form-control' id='option4' name='option4' />
+    </div>
+   
+    <select
+      class='form-select mb-4'
+      aria-label='Default select example'
+      name='trueOption'
+    >
+      <option value=''>---Chọn đáp án đúng---</option>
+      <option value='1'>Đáp án 1</option>
+      <option value='2'>Đáp án 2</option>
+      <option value='3'>Đáp án 3</option>
+      <option value='4'>Đáp án 4</option>
+    </select>
+    
+
+    <button type='submit' class='btn btn-primary'>Thêm Câu Hỏi</button>
+    
+  </form>
+</div>

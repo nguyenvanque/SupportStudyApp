@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Learning Support</string>
+    <string name="dangkythanhcong">Đăng ký thành công</string>
+    <string name="No_internet_connection">No internet</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="access_token">eyJjdHkiOiJzdHJpbmdlZS1hcGk7dj0xIiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJqdGkiOiJTS0p4T2hYSzVTYXZ2OFp1eDJ4dFB2SWtDblZCb0FpNEUzLTE2MTkxNDAxMDUiLCJpc3MiOiJTS0p4T2hYSzVTYXZ2OFp1eDJ4dFB2SWtDblZCb0FpNEUzIiwiZXhwIjoxNjIxNzMyMTA1LCJyZXN0X2FwaSI6dHJ1ZX0.ZsnAs8MGrV89Pzpl_EtqUefbjYiFx7bMwP2qfABbzU0</string>
+    <string name="channelId">Notify</string>
+    <string name="connecting">Đang kết nối...</string>
+    <string name="ringing">Đang đổ chuông...</string>
+    <string name="connected">Đã kết nối</string>
+    <string name="busy">Người dùng đang bận</string>
+    <string name="end_call">Kết thúc cuộc gọi</string>
+
+    <string name="btn_ok">OK</string>
+    <string name="Please_enable_gallery_permissions">Vui lòng bật quyền thư viện</string>
+    <string name="Please_enable_camera_permissions">Vui lòng bật quyền camera</string>
+</resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ChatContainerFragment">
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:background="@drawable/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="53dp">
+        <ImageView
+            android:id="@+id/menu"
+            android:visibility="visible"
+            android:src="@drawable/ic_back"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            app:tint="@color/black"
+            android:layout_marginLeft="20dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"/>
+        <TextView
+            android:text="Tin nhắn"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/ic_notification"
+                android:layout_marginRight="10dp"
+                app:tint="@color/black"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/IVProfile"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/tutor" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:paddingBottom="60dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <com.google.android.material.tabs.TabLayout
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:id="@+id/tablayout_chat"
+            app:tabTextColor="@color/black"
+            app:tabBackground="@color/float_transparent"
+            android:background="@color/float_transparent"
+            app:tabSelectedTextColor="@color/blue"
+            android:minHeight="?attr/actionBarSize"
+            app:tabIndicatorColor="@color/blue"
+            app:tabIndicatorHeight="3dp"
+            >
+        </com.google.android.material.tabs.TabLayout>
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/viewpager_chat">
+        </androidx.viewpager.widget.ViewPager>
+    </LinearLayout>
+    <include
+        android:id="@+id/layoutBottom"
+        layout="@layout/bottom_navigation" />
+</RelativeLayout>

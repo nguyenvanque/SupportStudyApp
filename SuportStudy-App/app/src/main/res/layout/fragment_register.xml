@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/float_transparent"
+    tools:context=".fragment.RegisterFragment">
+   <androidx.cardview.widget.CardView
+       android:layout_marginLeft="30dp"
+       android:layout_marginRight="30dp"
+       android:layout_marginTop="30dp"
+       android:elevation="7dp"
+       app:cardCornerRadius="5dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+      <EditText
+          android:id="@+id/edtName"
+          android:hint="Nhập tên của bạn"
+          android:background="@color/white"
+          android:drawableLeft="@drawable/ic_person"
+          android:drawablePadding="10dp"
+          android:paddingLeft="10dp"
+          android:textSize="15dp"
+          android:inputType="textEmailAddress"
+          android:lines="1"
+          android:layout_width="match_parent"
+          android:layout_height="55dp"/>
+   </androidx.cardview.widget.CardView>
+   <androidx.cardview.widget.CardView
+       android:layout_marginLeft="30dp"
+       android:layout_marginRight="30dp"
+       android:layout_marginTop="20dp"
+       android:elevation="7dp"
+       app:cardCornerRadius="5dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+      <EditText
+          android:id="@+id/edtEmail"
+          android:hint="Nhập email của bạn"
+          android:background="@color/white"
+          android:drawableLeft="@drawable/ic_email"
+          android:drawablePadding="10dp"
+          android:paddingLeft="10dp"
+          android:textSize="15dp"
+          android:inputType="textEmailAddress"
+          android:lines="1"
+          android:layout_width="match_parent"
+          android:layout_height="55dp"/>
+   </androidx.cardview.widget.CardView>
+   <androidx.cardview.widget.CardView
+       android:layout_marginLeft="30dp"
+       android:layout_marginRight="30dp"
+       android:layout_marginTop="20dp"
+       android:elevation="7dp"
+       app:cardCornerRadius="5dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+      <com.google.android.material.textfield.TextInputLayout
+          app:hintEnabled="false"
+          app:passwordToggleEnabled="true"
+          android:paddingRight="10dp"
+          android:gravity="center_vertical"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:boxStrokeColor="@color/white"
+          app:boxStrokeWidth="0dp"
+          app:boxStrokeWidthFocused="0dp"
+          app:boxBackgroundColor="#FFF">
+         <EditText
+             android:id="@+id/edtPassword"
+             android:inputType="textPassword"
+             android:hint="Nhập mật khẩu"
+             android:background="@color/white"
+             android:drawableLeft="@drawable/ic_key"
+             android:drawableStart="@drawable/ic_key"
+             android:drawablePadding="10dp"
+             android:layout_marginBottom="5dp"
+             android:textSize="15dp"
+             android:lines="1"
+             android:layout_width="match_parent"
+             android:layout_height="55dp"/>
+      </com.google.android.material.textfield.TextInputLayout>
+
+   </androidx.cardview.widget.CardView>
+   <androidx.cardview.widget.CardView
+       android:layout_marginLeft="30dp"
+       android:layout_marginRight="30dp"
+       android:layout_marginTop="20dp"
+       android:elevation="7dp"
+       app:cardCornerRadius="5dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+      <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:boxStrokeColor="@color/white"
+          app:boxStrokeWidth="0dp"
+          app:boxStrokeWidthFocused="0dp"
+          app:boxBackgroundColor="#FFF"
+          app:hintEnabled="false"
+          app:passwordToggleEnabled="true"
+          android:paddingRight="10dp">
+         <EditText
+             android:id="@+id/edtCfPassword"
+             android:inputType="textPassword"
+             android:hint="Nhập mật khẩu xác nhận"
+             android:background="@color/white"
+             android:drawableLeft="@drawable/ic_key"
+             android:drawableStart="@drawable/ic_key"
+             android:drawablePadding="10dp"
+             android:paddingLeft="10dp"
+             android:textSize="15dp"
+             android:lines="1"
+             android:layout_width="match_parent"
+             android:layout_height="55dp"
+             android:layout_marginBottom="5dp"
+             />
+      </com.google.android.material.textfield.TextInputLayout>
+
+   </androidx.cardview.widget.CardView>
+   <androidx.appcompat.widget.AppCompatButton
+       android:id="@+id/btnRegister"
+       android:layout_marginLeft="30dp"
+       android:layout_marginRight="30dp"
+       android:layout_marginTop="20dp"
+       android:text="ĐĂNG KÍ"
+       android:textColor="@color/white"
+       android:background="@drawable/button"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"/>
+   <TextView
+       android:layout_marginTop="10dp"
+       android:layout_gravity="center_horizontal"
+       android:text="Quay lại đăng kí thành viên"
+       android:id="@+id/txtHome"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"/>
+
+
+
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_background"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/IVGroup"
+        android:src="@drawable/loginimage"
+        android:layout_marginTop="20dp"
+        android:layout_width="85dp"
+        android:layout_height="85dp"/>
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/bg_edittext"
+        android:hint="Nhập tên nhóm"
+        android:padding="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/edtDecription"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/bg_edittext"
+        android:hint="Nhập mô tả nhóm"
+        android:padding="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnHuy"
+            android:text="Hủy"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/button01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnTao"
+            android:text="Tạo"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/white"
+            android:background="@drawable/button04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,144 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <!-- Font Awesome -->
+    <link
+      href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'
+      rel='stylesheet'
+    />
+    <!-- Google Fonts -->
+    <link
+      href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap'
+      rel='stylesheet'
+    />
+    <!-- MDB -->
+    <link
+      href='https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css'
+      rel='stylesheet'
+    />
+    <title>Document</title>
+    <link rel='stylesheet' href='./css/style.css' />
+  </head>
+  <body>
+    <section class='intro'>
+      <div
+        class='bg-image h-100'
+        style="background-image: url('https://i.idol.st/u/background/x3LA4iBackground-0ZHwra.jpg');"
+      >
+        <div class='mask d-flex align-items-center h-100'>
+          <div class='container'>
+            <div class='row justify-content-center'>
+              <div class='col-12 col-md-10 col-lg-7 col-xl-6'>
+                <div class='card mask-custom'>
+                  <div class='card-body p-5 text-white'>
+
+                    <div class=''>
+
+                      <div class='text-center mb-2'>
+                        <h2 style='margin-bottom: 20px;'>Register</h2>
+                        <img
+                          src='https://image.flaticon.com/icons/png/512/747/747086.png'
+                          style='width: 100px;height:100px;margin-top:-20px'
+                          class='rounded'
+                        />
+                      </div>
+
+                      <form method='POST' action='/register'>
+                        <!-- 2 column grid layout with text inputs for the first and last names -->
+
+                        <div class='form-outline form-white mb-4'>
+                          <input
+                            type='text'
+                            id='name'
+                            class='form-control form-control-lg'
+                            name='name'
+                          />
+                          <label
+                            class='form-label'
+                            for='form3Example3'
+                          >Name</label>
+                        </div>
+
+                        <!-- Email input -->
+                        <div class='form-outline form-white mb-4'>
+                          <input
+                            type='email'
+                            id='email'
+                            name='email'
+                            class='form-control form-control-lg'
+                          />
+                          <label class='form-label' for='form3Example3'>Email
+                            address</label>
+                        </div>
+
+                        <!-- Password input -->
+                        <div class='form-outline form-white mb-4'>
+                          <input
+                            type='password'
+                            name='password'
+                            id='password'
+                            class='form-control form-control-lg'
+                          />
+                          <label
+                            class='form-label'
+                            for='form3Example4'
+                          >Password</label>
+
+                        </div>
+                        <div class='form-outline form-white mb-4'>
+                          <input
+                            type='text'
+                            id='image'
+                            name='image'
+                            class='form-control form-control-lg'
+                          />
+                          <label
+                            class='form-label'
+                            for='form3Example3'
+                          >Image</label>
+                        </div>
+
+                        <select
+                          class='form-select mb-4'
+                          aria-label='Default select example'
+                          name='isTurtor'
+                        >
+                          <option value=''>---chon ---</option>
+                          <option value='false'>Người học</option>
+                          <option value='true'>Người hướng dẫn</option>
+                        </select>
+
+                        <!-- Checkbox -->
+
+                        <!-- Submit button -->
+                        <button
+                          type='submit'
+                          class='btn btn-light btn-block mb-2'
+                        >Sign up</button>
+                        <a href='/' class='btn btn-light btn-block mb-2'>Log in
+                        </a>
+
+                        <!-- Register buttons -->
+
+                      </form>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MDB -->
+    <script
+      type='text/javascript'
+      src='https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js'
+    ></script>
+  </body>
+</html>

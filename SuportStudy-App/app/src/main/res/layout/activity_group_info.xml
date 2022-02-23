@@ -1,0 +1,337 @@
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activity.group.InfoGroupActivity">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.agrawalsuneet.dotsloader.loaders.LazyLoader
+        android:id="@+id/myLoader"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        app:lazyloader_animDur="800"
+        app:lazyloader_dotsDist="6dp"
+        app:lazyloader_dotsRadius="6dp"
+        app:lazyloader_firstDelayDur="150"
+        app:lazyloader_firstDotColor="#FD0B0B"
+        app:lazyloader_interpolator="@android:anim/decelerate_interpolator"
+        app:lazyloader_secondDelayDur="300"
+        app:lazyloader_secondDotColor="#64DD17"
+        app:lazyloader_thirdDotColor="#FFD600" />
+
+    <RelativeLayout
+        android:id="@+id/dataLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:background="@color/white"
+            >
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_back"
+                app:tint="@color/black" />
+            <RelativeLayout
+                android:id="@+id/finishLayout"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="120dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/finishTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="Xong"
+                    android:layout_marginRight="20dp"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+
+            <View
+                android:background="@color/greynhat4"
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_height="0.1dp"/>
+        </RelativeLayout>
+        <androidx.core.widget.NestedScrollView
+            android:layout_below="@id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/groupImage"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_centerHorizontal="true"
+                    app:civ_border_width="3dp"
+                    app:civ_border_color="@color/greynhat3"
+                    android:src="@drawable/avatar_default" />
+
+                <TextView
+                    android:id="@+id/groupNameTv"
+                    android:textSize="25dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:layout_below="@id/groupImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+                <TextView
+                    android:id="@+id/groupDescriptionTv"
+                    android:textSize="15sp"
+                    android:textColor="@color/greynhat"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:layout_below="@id/groupNameTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/groupDescriptionTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--                <TextView-->
+                    <!--                    android:text="@string/notification"-->
+                    <!--                    android:textColor="@color/grey"-->
+                    <!--                    android:textSize="16dp"-->
+                    <!--                    android:layout_marginLeft="20dp"-->
+                    <!--                    android:layout_width="match_parent"-->
+                    <!--                    android:layout_height="wrap_content"/>-->
+                    <!--                <RelativeLayout-->
+                    <!--                    android:id="@+id/notificationLayout"-->
+                    <!--                    android:layout_marginTop="20dp"-->
+                    <!--                    android:layout_width="match_parent"-->
+                    <!--                    android:layout_height="52dp">-->
+
+                    <!--                    <ImageView-->
+                    <!--                        android:id="@+id/notificationIv"-->
+                    <!--                        android:layout_alignParentLeft="true"-->
+                    <!--                        android:layout_centerVertical="true"-->
+                    <!--                        android:layout_marginLeft="15dp"-->
+                    <!--                        android:src="@drawable/ic_notifcation_setting"-->
+                    <!--                        android:layout_width="35dp"-->
+                    <!--                        android:layout_height="35dp"/>-->
+                    <!--                    <TextView-->
+                    <!--                        android:text="@string/notification"-->
+                    <!--                        android:layout_toRightOf="@id/notificationIv"-->
+                    <!--                        android:layout_marginLeft="20dp"-->
+                    <!--                        android:textSize="15dp"-->
+                    <!--                        android:textColor="@color/blackNhat2"-->
+                    <!--                        android:textStyle="bold"-->
+                    <!--                        android:layout_centerVertical="true"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"/>-->
+                    <!--                    <com.suke.widget.SwitchButton-->
+                    <!--                        android:id="@+id/switchNotification"-->
+                    <!--                        android:layout_alignParentRight="true"-->
+                    <!--                        android:layout_centerVertical="true"-->
+                    <!--                        android:layout_marginRight="10dp"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        />-->
+
+                    <!--                    <View-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="0.1dp"-->
+                    <!--                        android:layout_toRightOf="@id/notificationIv"-->
+                    <!--                        android:layout_alignParentBottom="true"-->
+                    <!--                        android:layout_marginRight="10dp"-->
+                    <!--                        android:background="@color/greynhat3" />-->
+                    <!--                </RelativeLayout>-->
+                    <TextView
+                        android:id="@+id/infoTv"
+                        android:text="Thông tin"
+                        android:textColor="@color/grey"
+                        android:textSize="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <RelativeLayout
+                        android:id="@+id/changeGroupNameLayout"
+                        android:layout_below="@id/infoTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp">
+
+                        <ImageView
+                            android:id="@+id/changeNameIv"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/ic_edit_name"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"/>
+                        <TextView
+                            android:text="Đổi tên nhóm"
+                            android:layout_toRightOf="@id/changeNameIv"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="15dp"
+                            android:textColor="@color/blackNhat2"
+                            android:textStyle="bold"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <View
+                            android:layout_alignParentBottom="true"
+                            android:layout_toRightOf="@id/changeNameIv"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/greynhat3"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/viewMemberLayout"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/changeGroupNameLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp">
+
+                        <ImageView
+                            android:id="@+id/blockIv"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/ic_person"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"/>
+                        <TextView
+                            android:text="Xem thành viên trong nhóm"
+                            android:layout_toRightOf="@id/blockIv"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="15dp"
+                            android:textColor="@color/blackNhat2"
+                            android:textStyle="bold"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <View
+                            android:layout_alignParentBottom="true"
+                            android:layout_toRightOf="@id/blockIv"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/greynhat3"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"/>
+                    </RelativeLayout>
+
+                    <!--                <TextView-->
+                    <!--                    android:id="@+id/settingTv"-->
+                    <!--                    android:textSize="16dp"-->
+                    <!--                    android:layout_marginTop="10dp"-->
+                    <!--                    android:layout_marginLeft="20dp"-->
+                    <!--                    android:textColor="@color/grey"-->
+                    <!--                    android:text="@string/settings"-->
+                    <!--                    android:layout_below="@id/viewMemberLayout"-->
+                    <!--                    android:layout_width="match_parent"-->
+                    <!--                    android:layout_height="wrap_content"/>-->
+                    <!--                <RelativeLayout-->
+                    <!--                    android:id="@+id/addMemberLayout"-->
+                    <!--                    android:layout_below="@id/settingTv"-->
+                    <!--                    android:layout_width="match_parent"-->
+                    <!--                    android:layout_height="52dp">-->
+                    <!--                    <ImageView-->
+                    <!--                        android:id="@+id/changepasswordIv"-->
+                    <!--                        android:layout_alignParentLeft="true"-->
+                    <!--                        android:layout_centerVertical="true"-->
+                    <!--                        android:layout_marginLeft="15dp"-->
+                    <!--                        android:src="@drawable/create_group"-->
+                    <!--                        android:layout_width="35dp"-->
+                    <!--                        android:layout_height="35dp"/>-->
+                    <!--                    <TextView-->
+                    <!--                        android:text="@string/Add_member"-->
+                    <!--                        android:layout_toRightOf="@id/changepasswordIv"-->
+                    <!--                        android:layout_marginLeft="20dp"-->
+                    <!--                        android:textSize="15dp"-->
+                    <!--                        android:textColor="@color/blackNhat2"-->
+                    <!--                        android:textStyle="bold"-->
+                    <!--                        android:layout_centerVertical="true"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"/>-->
+
+                    <!--                    <View-->
+                    <!--                        android:layout_alignParentBottom="true"-->
+                    <!--                        android:layout_toRightOf="@id/changepasswordIv"-->
+                    <!--                        android:layout_marginRight="10dp"-->
+                    <!--                        android:background="@color/greynhat3"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="0.1dp"/>-->
+                    <!--                </RelativeLayout>-->
+
+                    <RelativeLayout
+                        android:id="@+id/leaveGroupLayout"
+                        android:layout_below="@id/viewMemberLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp">
+                        <ImageView
+                            android:id="@+id/logoutIv"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/ic_logout"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"/>
+                        <TextView
+                            android:id="@+id/leaveGroupTv"
+                            android:text="Rời nhóm"
+                            android:layout_toRightOf="@id/logoutIv"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="15dp"
+                            android:textColor="@color/blackNhat2"
+                            android:textStyle="bold"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_marginTop="15dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="version_1_0_0"
+                        android:paddingTop="30dp"
+                        android:fontFamily="@font/mo_li"
+                        android:layout_below="@id/leaveGroupLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</RelativeLayout>
+
+
+
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

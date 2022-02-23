@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/grey10"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.home.HomeActivity">
+    <FrameLayout
+        android:id="@+id/mainContainer"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+  <LinearLayout
+      android:id="@+id/bottomNav"
+      android:layout_alignParentBottom="true"
+      android:background="@drawable/background_bottombar"
+      android:layout_width="match_parent"
+      android:layout_height="60dp">
+      <LinearLayout
+          android:id="@+id/btnHome"
+          android:layout_weight="1"
+          android:orientation="vertical"
+          android:gravity="center_horizontal"
+          android:layout_gravity="center_vertical"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content">
+          <ImageView
+              android:src="@drawable/ic_home"
+              android:layout_width="30dp"
+              android:layout_height="30dp"/>
+          <TextView
+              android:text="Bài viết"
+              android:textSize="14dp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"/>
+      </LinearLayout>
+      <LinearLayout
+          android:id="@+id/btnChat"
+          android:layout_weight="1"
+          android:orientation="vertical"
+          android:gravity="center_horizontal"
+          android:layout_gravity="center_vertical"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content">
+          <ImageView
+              android:src="@drawable/ic_chat"
+              android:layout_width="28dp"
+              android:layout_height="28dp"/>
+          <TextView
+              android:text="Tin nhắn"
+              android:textSize="14dp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"/>
+      </LinearLayout>
+      <LinearLayout
+          android:id="@+id/btnDocument"
+          android:layout_weight="1"
+          android:orientation="vertical"
+          android:gravity="center_horizontal"
+          android:layout_gravity="center_vertical"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content">
+          <ImageView
+              android:layout_width="28dp"
+              android:layout_height="28dp"
+              android:src="@drawable/ic_book" />
+          <TextView
+              android:text="Ghi chú"
+              android:textSize="14dp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"/>
+      </LinearLayout>
+  </LinearLayout>
+</RelativeLayout>

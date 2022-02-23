@@ -1,0 +1,62 @@
+{
+  "name": "nodejs_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "beautiful": "lint-staged",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "node-sass --watch src/resources/scss/ -o src/public/css/",
+    "start": "nodemon --inspect src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngoctran5596/nodejs_ngoc.git"
+  },
+  "keywords": [
+    "ngoc_blog"
+  ],
+  "private": false,
+  "author": "ngocson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ngoctran5596/nodejs_ngoc/issues"
+  },
+  "homepage": "https://github.com/ngoctran5596/nodejs_ngoc#readme",
+  "lint-staged": {
+    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.1",
+    "fs-extra": "^10.0.0",
+    "handlebars-dateformat": "^1.1.1",
+    "http-errors": "^1.8.0",
+    "js-sha256": "^0.9.0",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-then": "^1.0.1",
+    "method-override": "^3.0.0",
+    "moment": "^2.29.1",
+    "mongoose": "^5.12.10",
+    "mongoose-slug-generator": "^1.0.4",
+    "multer": "^1.4.2",
+    "nanoid": "^3.1.23",
+    "shortid": "^2.2.16",
+    "socket.io": "^4.1.2"
+  },
+  "devDependencies": {
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "morgan": "^1.10.0",
+    "node-sass": "^5.0.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.0"
+  }
+}

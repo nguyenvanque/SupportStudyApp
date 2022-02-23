@@ -1,0 +1,82 @@
+<div class='container'>
+  <div class='row'>
+    <div class='table-responsive'>
+           <h1 style="text-align: center;  background-color:#FFE4C4;padding:20px;font-weight: bold;">User App</h1>
+
+      <table class='table table-bordered align-middle'>
+        <thead>
+          <tr>
+            <th scope='col'>STT</th>
+            <th scope='col'>Name</th>
+            <th scope='col'>Email</th>
+            <th scope='col'>Password</th>
+            <th scope='col'>Image</th>
+            <th scope='col'>isTutor</th>
+            <th scope='col'>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each users}}
+          <tr>
+            <th scope='row'>{{sum @index 1}}</th>
+            <td>{{this.name}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.password}}</td>
+            <td>{{this.image}}</td>
+            <td>{{this.isTurtor}}</td>
+            <td>
+              <a href="#" type='button' class='btn btn-danger' data-bs-id="{{this._id}}" data-bs-toggle="modal"
+                data-bs-target="#deleteleModal">Delete</a>
+            </td>
+            </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+{{!confirm delete courses---}}
+<div class="modal fade" id="deleteleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Xóa User</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Bạn muốn xóa USer này?
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="btn-delete-user" class="btn btn-primary">XÓA</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">HỦY</button>
+      </div>
+    </div>
+  </div>
+</div>
+{{!-- Delete hiden form --}}
+<form method='POST' id="DeleteForm"></form>
+
+<script>
+  //lấy cái nút  thằng modal
+  
+  const deleteModal = document.getElementById('deleteleModal');
+
+  //add cho nó 1 cái sự kiện là show nó lên mặc định ẩn
+  deleteModal.addEventListener('show.bs.modal', function (event) {
+    //show rồi thì lấy cái form ẩn ra
+    const deleteForm = document.getElementById("DeleteForm");
+    // Button that triggered the modal
+    // thằng này của bootrap dùng lấy dữ liệu đã đưa vào  boostrap
+    const button = event.relatedTarget;
+    // Extract info from data-bs-* attributes 
+    const id = button.getAttribute('data-bs-id');
+  
+    const btnDeleteCourese = document.getElementById('btn-delete-user');
+    btnDeleteCourese.onclick = function () {
+      deleteForm.action = '/' + id + '?_method=DELETE';
+      deleteForm.submit();
+    }
+  })
+</script>

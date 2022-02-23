@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swRefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".fragment.SelfNoteFragment">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layoutNoData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="320dp"
+                    android:layout_height="250dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/nogroup"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Chưa có dữ liệu ghi chú cá nhân"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.agrawalsuneet.dotsloader.loaders.LazyLoader
+                android:id="@+id/myLoader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lazyloader_animDur="800"
+                app:lazyloader_dotsDist="6dp"
+                app:lazyloader_dotsRadius="6dp"
+                app:lazyloader_firstDelayDur="150"
+                app:lazyloader_firstDotColor="#FD0B0B"
+                app:lazyloader_interpolator="@android:anim/decelerate_interpolator"
+                app:lazyloader_secondDelayDur="300"
+                app:lazyloader_secondDotColor="#64DD17"
+                app:lazyloader_thirdDotColor="#FFD600" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvDocument"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:padding="5dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btnAdd"
+                android:backgroundTint="#00BCD4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/ic_add"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</layout>

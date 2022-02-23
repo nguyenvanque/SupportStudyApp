@@ -1,0 +1,49 @@
+@charset "UTF-8";
+.test {
+  font-size: large;
+  color: red;
+  font-size: 1em sans-serif; }
+
+.card-margintop-12 {
+  margin-top: 20px; }
+
+.mr {
+  float: right; }
+
+.user-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  margin-right: 4px; }
+
+html,
+body,
+.intro {
+  height: 100%; }
+
+@media (min-width: 550px) and (max-width: 750px) {
+  html,
+  body,
+  .intro {
+    height: 750px; } }
+
+@media (min-width: 800px) and (max-width: 850px) {
+  html,
+  body,
+  .intro {
+    height: 750px; } }
+
+.mask-custom {
+  backdrop-filter: blur(15px);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3em;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background-clip: padding-box;
+  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03); }
+
+.sidebar li .submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 1rem;
+  padding-right: 1rem; }

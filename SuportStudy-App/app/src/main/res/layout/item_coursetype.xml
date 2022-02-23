@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_search">
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/courseIv"
+        android:src="@drawable/android"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="10dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"/>
+    <TextView
+        android:id="@+id/txtName"
+        android:text="Android"
+        android:textColor="@color/black"
+
+        android:layout_toRightOf="@id/courseIv"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:id="@+id/nextIv"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_row"
+        android:layout_centerVertical="true"
+        app:tint="@color/blue"
+        android:layout_width="27dp"
+        android:layout_height="27dp"/>
+</RelativeLayout>

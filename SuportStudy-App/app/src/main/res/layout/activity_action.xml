@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/homeLayout"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ActionActivity">
+    <TextView
+        android:id="@+id/txtName"
+        android:text="V1Nondls"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_margin="10dp"
+        android:id="@+id/avatarIv"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/avatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
+  <LinearLayout
+      android:layout_centerInParent="true"
+      android:orientation="vertical"
+      android:gravity="center"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <TextView
+          android:text="Xin chào bạn đến với ứng dụng !"
+          android:textSize="18dp"
+          android:textStyle="bold"
+          android:textColor="@color/grey"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+      <TextView
+          android:text="Lựa chọn?"
+          android:layout_marginTop="5dp"
+          android:textSize="28dp"
+          android:textStyle="bold"
+          android:textColor="@color/black"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+
+
+      <androidx.cardview.widget.CardView
+          android:id="@+id/btnDisscus"
+          android:layout_marginTop="25dp"
+          android:layout_marginLeft="20dp"
+          android:layout_marginRight="20dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          app:cardCornerRadius="25dp"
+          android:elevation="0dp">
+          <LinearLayout
+              android:paddingTop="25dp"
+              android:paddingBottom="25dp"
+              android:layout_marginLeft="20dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+              <de.hdodenhof.circleimageview.CircleImageView
+                  android:src="@drawable/tutor"
+                  android:layout_gravity="center_vertical"
+                  android:layout_width="65dp"
+                  android:layout_height="65dp"/>
+              <LinearLayout
+                  android:layout_marginLeft="30dp"
+                  android:orientation="vertical"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content">
+                  <TextView
+                      android:text="Thảo luận"
+                      android:textSize="18dp"
+                      android:textColor="@color/black"
+                      android:textStyle="bold"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"/>
+                  <TextView
+
+                      android:text="Thảo luận với các thành viên trong nhóm"
+                      android:textSize="14dp"
+                      android:textStyle="bold"
+                      android:textColor="@color/grey"
+                      android:layout_marginTop="5dp"
+                      android:layout_width="200dp"
+                      android:layout_height="wrap_content"/>
+              </LinearLayout>
+          </LinearLayout>
+
+      </androidx.cardview.widget.CardView>
+      <androidx.cardview.widget.CardView
+          android:id="@+id/btnTopic"
+          android:layout_marginTop="25dp"
+          android:layout_marginLeft="20dp"
+          android:layout_marginRight="20dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:cardCornerRadius="25dp"
+          android:elevation="0dp">
+          <LinearLayout
+              android:paddingTop="25dp"
+              android:paddingBottom="25dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+              <de.hdodenhof.circleimageview.CircleImageView
+                  android:src="@drawable/member"
+                  android:layout_marginLeft="20dp"
+                  android:layout_width="65dp"
+                  android:layout_height="65dp"/>
+              <LinearLayout
+                  android:layout_marginLeft="30dp"
+                  android:orientation="vertical"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content">
+                  <TextView
+                      android:text="Chọn chủ đề"
+                      android:textSize="18dp"
+                      android:textColor="@color/black"
+                      android:textStyle="bold"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"/>
+                  <TextView
+
+                      android:text="Lựa chọn chủ đề có trong ứng dụng"
+                      android:textSize="14dp"
+                      android:textStyle="bold"
+                      android:textColor="@color/grey"
+                      android:layout_marginTop="5dp"
+                      android:layout_width="200dp"
+                      android:layout_height="wrap_content"/>
+              </LinearLayout>
+          </LinearLayout>
+
+      </androidx.cardview.widget.CardView>
+  </LinearLayout>
+    <TextView
+        android:text="Version 1.0.0"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

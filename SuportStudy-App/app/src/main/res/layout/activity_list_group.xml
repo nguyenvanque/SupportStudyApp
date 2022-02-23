@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey10"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".activity.group.ListGroupActivity">
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
+
+     <com.agrawalsuneet.dotsloader.loaders.LazyLoader
+         android:id="@+id/myLoader"
+         android:layout_centerInParent="true"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_margin="20dp"
+         android:layout_marginTop="30dp"
+         app:lazyloader_animDur="800"
+         app:lazyloader_dotsDist="6dp"
+         app:lazyloader_dotsRadius="6dp"
+         app:lazyloader_firstDelayDur="150"
+         app:lazyloader_firstDotColor="#FD0B0B"
+         app:lazyloader_interpolator="@android:anim/decelerate_interpolator"
+         app:lazyloader_secondDelayDur="300"
+         app:lazyloader_secondDotColor="#64DD17"
+         app:lazyloader_thirdDotColor="#FFD600" />
+
+     <LinearLayout
+         android:id="@+id/noDataLayout"
+         android:visibility="gone"
+         android:gravity="center_horizontal"
+         android:layout_centerInParent="true"
+         android:orientation="vertical"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+         <ImageView
+
+             android:src="@drawable/nogroup"
+             android:scaleType="fitXY"
+             android:layout_width="320dp"
+             android:layout_height="250dp"/>
+         <TextView
+             android:textSize="20dp"
+             android:textColor="@color/black"
+             android:text="Không có dữ liệu"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"/>
+     </LinearLayout>
+     <LinearLayout
+         android:orientation="vertical"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
+         <RelativeLayout
+             android:id="@+id/toolbar"
+             android:background="@drawable/toolbar"
+             android:layout_width="match_parent"
+             android:layout_height="55dp">
+             <ImageView
+                 android:id="@+id/backIv"
+                 android:src="@drawable/ic_back"
+                 android:layout_alignParentLeft="true"
+                 android:layout_centerVertical="true"
+                 app:tint="@color/black"
+                 android:layout_marginLeft="20dp"
+                 android:layout_width="20dp"
+                 android:layout_height="20dp"/>
+
+             <TextView
+                 android:id="@+id/txtTitle"
+                 android:gravity="center"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_centerInParent="true"
+                 android:text="title"
+                 android:textColor="@color/black"
+                 android:textSize="17dp"
+                 android:textStyle="bold" />
+             <LinearLayout
+                 android:visibility="gone"
+                 android:layout_alignParentRight="true"
+                 android:layout_centerVertical="true"
+                 android:layout_marginRight="20dp"
+                 android:orientation="horizontal"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content">
+                 <ImageView
+                     android:src="@drawable/ic_notification"
+                     android:layout_marginRight="10dp"
+                     app:tint="@color/black"
+                     android:layout_width="30dp"
+                     android:layout_height="30dp"/>
+
+                 <de.hdodenhof.circleimageview.CircleImageView
+                     android:id="@+id/IVProfile"
+                     android:layout_width="28dp"
+                     android:layout_height="28dp"
+                     android:src="@drawable/tutor" />
+             </LinearLayout>
+         </RelativeLayout>
+
+         <SearchView
+             android:id="@+id/searchView"
+             android:background="@drawable/background_search"
+             android:layout_marginTop="15dp"
+             android:layout_marginLeft="10dp"
+             android:layout_marginRight="10dp"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"/>
+         <androidx.recyclerview.widget.RecyclerView
+             android:id="@+id/rcvListGroup"
+             android:layout_marginTop="10dp"
+             android:layout_marginLeft="10dp"
+             android:layout_marginRight="10dp"
+             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+             android:orientation="vertical"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"/>
+     </LinearLayout>
+ </RelativeLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

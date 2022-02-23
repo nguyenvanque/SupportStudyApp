@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.AddNoteFragment">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@drawable/toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/menu"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_back"
+                android:visibility="visible"
+                app:tint="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Thêm ghi chú"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/padding_10"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/font"
+            android:text="Tiêu đề"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <EditText
+            android:maxLength="256"
+            android:id="@+id/edtMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/padding_10"
+            android:layout_marginTop="@dimen/padding_10"
+            android:fontFamily="@font/font"
+            android:hint="Nhập tiêu đề"
+            android:inputType="textCapSentences|textImeMultiLine"
+            android:maxLines="2"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/colorOfStroke"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_10"
+            android:fontFamily="@font/font"
+            android:text="Nội dung"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@+id/edtMessage" />
+
+        <EditText
+            android:id="@+id/edtContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/padding_10"
+            android:layout_marginTop="@dimen/padding_10"
+            android:fontFamily="@font/font"
+            android:hint="Nhập nội dung"
+            android:inputType="textCapSentences|textImeMultiLine"
+            android:maxLines="5"
+            android:padding="15dp"
+            android:maxLength="256"
+            android:textColor="@color/black"
+            android:textColorHint="@color/colorOfStroke"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvContent"
+            app:layout_constraintTop_toBottomOf="@+id/tvContent" />
+
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/tvAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/btn_background"
+            android:fontFamily="@font/font"
+            android:padding="20dp"
+            android:text="Xác nhận"
+            android:textColor="@color/blackNhat2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtContent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

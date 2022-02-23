@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:id="@+id/homeLayout"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+    <TextView
+        android:text="Lựa chọn tài khoản của bạn !"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:textColor="@color/grey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:text="Bạn là?"
+        android:layout_marginTop="5dp"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btnTutor"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="25dp"
+        android:elevation="0dp">
+        <LinearLayout
+            android:padding="20dp"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:src="@drawable/tutor"
+                android:layout_width="80dp"
+                android:layout_height="80dp"/>
+          <LinearLayout
+              android:layout_marginLeft="30dp"
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+              <TextView
+                  android:text="Người hướng dẫn"
+                  android:textSize="21dp"
+                  android:textColor="@color/black"
+                  android:textStyle="bold"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"/>
+              <TextView
+
+                  android:text="Tạo nhóm và hướng dẫn thành viên"
+                  android:textSize="16dp"
+                  android:textStyle="bold"
+                  android:textColor="@color/grey"
+                  android:layout_marginTop="5dp"
+                  android:layout_width="200dp"
+                  android:layout_height="wrap_content"/>
+          </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="25dp"
+        android:elevation="0dp">
+        <LinearLayout
+            android:id="@+id/btnMember"
+            android:padding="20dp"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:src="@drawable/member"
+                android:layout_width="80dp"
+                android:layout_height="80dp"/>
+            <LinearLayout
+                android:layout_marginLeft="30dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Thành viên thường"
+                    android:textSize="21dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+
+                    android:text="Tạo nhóm và hướng dẫn thành viên"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/grey"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="25dp"
+        android:elevation="0dp">
+        <LinearLayout
+            android:id="@+id/btnLoginMain"
+            android:padding="20dp"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:src="@drawable/loginimage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"/>
+            <LinearLayout
+                android:layout_marginLeft="30dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Bạn đã có tài khoản"
+                    android:textSize="21dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+
+                    android:text="Bạn có thể đăng nhập khi có tài khoản trong ứng dụng"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/grey"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

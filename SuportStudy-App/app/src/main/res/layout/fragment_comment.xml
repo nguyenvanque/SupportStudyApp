@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_toobar">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:background="@drawable/background_toobar"
+        >
+        <ImageView
+            android:id="@+id/backIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_back_left_grey"
+            android:layout_centerVertical="true"
+            app:tint="@color/blackNhat2" />
+
+        <TextView
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Bình luận" />
+
+
+        <View
+            android:layout_alignParentBottom="true"
+            android:background="@color/greynhat2"
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"/>
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/commentsLayout"
+        android:layout_below="@id/toolbar"
+        android:layout_marginBottom="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="0.3px"
+                android:layout_marginBottom="10dp"
+                android:background="@color/greynhat3" />
+
+            <LinearLayout
+                android:id="@+id/like"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/likeBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp">
+
+                    <ImageView
+                        android:id="@+id/likeIv"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/ic_like" />
+
+                    <TextView
+                        android:id="@+id/likeCommentTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="Like"
+                        android:textColor="@color/greynhat2" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/hideCommentLayout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/like"
+                android:layout_marginTop="100dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/comments2"
+                    app:tint="@color/greynhat2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chưa có bình luận nào"
+                    android:textColor="@color/greynhat2"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:textColor="@color/greynhat2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hãy là người đâu tiên bình luận"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/like" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+    <com.agrawalsuneet.dotsloader.loaders.LazyLoader
+        android:id="@+id/myLoader"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        app:lazyloader_animDur="800"
+        app:lazyloader_dotsDist="6dp"
+        app:lazyloader_dotsRadius="6dp"
+        app:lazyloader_firstDelayDur="150"
+        app:lazyloader_firstDotColor="#FD0B0B"
+        app:lazyloader_interpolator="@android:anim/decelerate_interpolator"
+        app:lazyloader_secondDelayDur="300"
+        app:lazyloader_secondDotColor="#64DD17"
+        app:lazyloader_thirdDotColor="#FFD600" />
+    <RelativeLayout
+        android:id="@+id/commentsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <View
+            android:id="@+id/viewGrey"
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/greynhat4" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/cAvatarIv"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/viewGrey"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/avatar_default" />
+
+        <EditText
+            android:id="@+id/commentEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="1dp"
+            android:layout_toLeftOf="@id/senBtn"
+            android:layout_toRightOf="@id/cAvatarIv"
+            android:background="@color/white"
+            android:hint="Nhập bình luận..."
+            android:padding="12dp"
+            android:textColor="@color/blackNhat2"
+            android:textColorHint="@color/grey"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/senBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/ic_send_blue"
+            app:tint="@color/blackNhat2" />
+    </RelativeLayout>
+</RelativeLayout>

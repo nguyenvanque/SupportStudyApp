@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/tab_home"
+        android:icon="@drawable/ic_home"
+        android:title="Bài viết"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/tab_inbox"
+        android:enabled="true"
+        android:icon="@drawable/ic_chat"
+        android:title="Tin nhắn"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/tab_note"
+        android:enabled="true"
+        android:icon="@drawable/ic_book"
+        android:title="Ghi chú"
+        app:showAsAction="ifRoom"/>
+</menu>

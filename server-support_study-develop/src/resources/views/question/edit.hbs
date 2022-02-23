@@ -1,0 +1,68 @@
+<div class='mt-4'>
+  <h3>Update Câu hỏi</h3>
+  <form method='POST' action='/question/store'>
+    <div class='mb-3'>
+      <label for='title' class='form-label'>Tên Câu hỏi</label>
+        <textarea
+        class='form-control'
+        id='title'
+        name='title'
+      >{{question.title}}</textarea>
+    </div>
+    <div class='mb-3'>
+      <label for='option1' class='form-label'>Đáp án 1</label>
+        <textarea
+        class='form-control'
+        id='option1'
+        name='option1'
+      >{{question.option1}}</textarea>
+     
+    </div>
+    <div class='mb-3'>
+      <label for='option2' class='form-label'>Đáp án 2</label>
+       <textarea
+        class='form-control'
+        id='option2'
+        name='option2'
+      >{{question.option2}}</textarea>
+    
+    </div>
+    <div class='mb-3'>
+      <label for='option3' class='form-label'>Đáp án 3</label>
+       <textarea
+        class='form-control'
+        id='option3'
+        name='option3'
+      >{{question.option3}}</textarea>
+    
+      
+    </div>
+    <div class='mb-3'>
+      <label for='option4' class='form-label'>Đáp án 4</label>
+      <textarea
+        class='form-control'
+        id='option4'
+        name='option4'
+      >{{question.option4}}</textarea>
+    
+     
+    </div>
+   
+    <select
+      class='form-select mb-4'
+      aria-label='Default select example'
+      name='trueOption'
+      
+    >
+      <option value='{{question.trueOption}}'> Đáp án {{question.trueOption}}</option>
+      <option value='1'>Đáp án 1</option>
+      <option value='2'>Đáp án 2</option>
+      <option value='3'>Đáp án 3</option>
+      <option value='4'>Đáp án 4</option>
+    </select>
+    
+
+    <button type='submit' class='btn btn-primary'>Lưu</button>
+    
+  </form>
+</div>
